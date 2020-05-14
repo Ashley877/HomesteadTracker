@@ -57,10 +57,11 @@ class MyApp extends StatelessWidget {
         bottomAppBarColor: colorCustomGrey,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         buttonTheme: ButtonThemeData(
+          minWidth: 120,
+          height: 40,
           buttonColor: colorCustomOrange,
           shape: RoundedRectangleBorder(),
           textTheme: ButtonTextTheme.accent,
-          minWidth: 50,
         ),
         fontFamily: 'Roboto',
       ),

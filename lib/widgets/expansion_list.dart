@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/animals.dart';
+import '../constants/tokens/colors.dart';
 
 class ExpansionList extends StatelessWidget {
   @override
@@ -30,6 +31,7 @@ class EntryItem extends StatelessWidget {
   Widget _buildTiles(Entry root) {
     if (root.children.isEmpty) return ListTile(title: Text(root.title));
     return ExpansionTile(
+      backgroundColor: colorCustomOrange,
       key: PageStorageKey<Entry>(root),
       title: Text(root.title),
       children: root.children.map(_buildTiles).toList(),

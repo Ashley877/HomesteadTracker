@@ -14,7 +14,8 @@ import 'new_todo_dialog.dart';
 import 'todo.dart';
 
 class HomepageRoute extends StatefulWidget {
-  const HomepageRoute({Key key}) : super(key: key);
+  final bool animals;
+  const HomepageRoute({Key key, this.animals = true}) : super(key: key);
 
   @override
   _HomepageState createState() => _HomepageState();
@@ -37,51 +38,24 @@ class _HomepageState extends State<HomepageRoute> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                //     RaisedButton(
-                //       child: Text('Animals'),
-                //       onPressed: () => print("pressed animals");
-                //        Navigator.pushNamed(context, HomepageRoute);
-                //     ),
-                Container(
-                    //width: loginContentWidth,
-                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      mainAxisSize: MainAxisSize.max,
-                      children: <Widget>[
-                        Container(
-                            color: colorCustomGrey,
-                            child: RaisedButton(
-                              onPressed: () {
-                                //forgot password screen
-                                Navigator.pushNamed(
-                                    context, routes.HomepageRoute);
-                              },
-                              //textColor: Colors.white,
-                              child: Text('Animals'),
-                            )),
-                        Container(
-                            color: colorCustomGrey,
-                            child: RaisedButton(
-                              onPressed: () {
-                                //forgot password screen
-                                Navigator.pushNamed(
-                                    context, routes.TodoListScreen);
-                              },
-                              //textColor: Colors.white,
-                              child: Text('Tasks'),
-                            )),
-                      ],
-                    )),
-
-                // Container(
-                //   width: 24.0,
-                // ),
-                // RaisedButton(
-                //   child: Text('Tasks'),
-                //   onPressed: () => print("pressed tasks");
-                //    Navigator.pushNamed(context, TodoLists);
-                // ),
+                RaisedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, routes.HomepageRoute,
+                        arguments: true);
+                  },
+                  textColor: Colors.black,
+                  child: Text('Animals'),
+                ),
+                Container(width: 12),
+                RaisedButton(
+                  color: secondGrey,
+                  onPressed: () {
+                    //forgot password screen
+                    Navigator.pushNamed(context, routes.TodoListScreen);
+                  },
+                  textColor: Colors.black,
+                  child: Text('Tasks'),
+                )
               ],
             ),
             Container(

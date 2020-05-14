@@ -44,3 +44,18 @@ Map<int, Color> fadedOrange = {
 };
 
 MaterialColor secondaryOrange = MaterialColor(0xFFE2E3E4, fadedOrange);
+
+Map<int, Color> secondaryGrey = {
+  50: Color.fromRGBO(177, 175, 170, .1),
+  100: Color.fromRGBO(177, 175, 170, .2),
+  200: Color.fromRGBO(177, 175, 170, .3),
+  300: Color.fromRGBO(177, 175, 170, .4),
+  400: Color.fromRGBO(177, 175, 170, .5),
+  500: Color.fromRGBO(177, 175, 170, .6),
+  600: Color.fromRGBO(177, 175, 170, .7),
+  700: Color.fromRGBO(177, 175, 170, .8),
+  800: Color.fromRGBO(177, 175, 170, .9),
+  900: Color.fromRGBO(177, 175, 170, 1),
+};
+
+MaterialColor secondGrey = MaterialColor(0xFFB1AFAA, secondaryGrey);

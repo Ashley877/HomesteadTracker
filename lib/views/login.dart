@@ -42,7 +42,7 @@ class _State extends State<LoginView> {
                   //height: 100,
                   padding: EdgeInsets.all(10),
                   child: Image(
-                    image: AssetImage('assets/images/house.jpg'),
+                    image: AssetImage('assets/images/house.png'),
                   ),
                 ),
                 Container(
@@ -50,7 +50,8 @@ class _State extends State<LoginView> {
                     alignment: Alignment.center,
                     padding: EdgeInsets.all(10),
                     child: Text(
-                      'Maximize your productivity on your homestead by joining now',
+                      'Maximize your productivity\n on your homestead\n by joining now',
+                      textAlign: TextAlign.center,
                       style: TextStyle(
                           color: colorCustomOrange,
                           fontWeight: FontWeight.w500,
@@ -127,7 +128,7 @@ class _State extends State<LoginView> {
                         FlatButton(
                           textColor: colorCustomOrange,
                           child: Text(
-                            'Sign in',
+                            'Sign up',
                             style: TextStyle(fontSize: 20),
                           ),
                           onPressed: () {
